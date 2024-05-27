@@ -16,8 +16,8 @@ const resetGame = () => {
     hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
     guessesText.innerHTML = `${wrongGuessCount} / ${maxGuesses}`
     keyboardDiv.querySelectorAll("button").forEach(btn => {
-        btn.disabled = false
         btn.classList.remove("clicked");
+        btn.disabled = false
     });
 }
 const getRandomWord = () => {

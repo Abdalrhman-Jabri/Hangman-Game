@@ -15,7 +15,10 @@ const resetGame = () => {
     gameModal.classList.remove("show");
     hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`;
     guessesText.innerHTML = `${wrongGuessCount} / ${maxGuesses}`
-    keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
+    keyboardDiv.querySelectorAll("button").forEach(btn => {
+        btn.disabled = false
+        btn.classList.remove("clicked");
+    });
 }
 const getRandomWord = () => {
     const { word, hint } = wordList[Math.floor(Math.random() * wordList.length)]

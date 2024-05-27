@@ -102,9 +102,8 @@ body {
 }
 
 .keyboard button.clicked {
-    background: #8286c9;
+    opacity: 0.6;
     pointer-events: none;
-
 }
 
 :where(.game-modal, .keyboard) button:hover {
